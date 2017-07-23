@@ -24,9 +24,13 @@ ngrok 1.x is no longer developed, supported or maintained by its author, except 
 3. No new features will be added. Any pull requests with new features will be closed. Please fork the project instead.
 4. Pull requests fixing existing bugs or improving documentation are welcomed.
 
-## The ngrok 1.x hosted service
+#### The ngrok 1.x hosted service
 
 ngrok.com ran a pay-what-you-want hosted service of 1.x from early 2013 until April 7, 2016. Afterwards, it only runs 2.x service.
+
+## Production Use
+
+**DO NOT RUN THIS VERSION OF NGROK (1.X) IN PRODUCTION**. Both the client and server are known to have serious reliability issues including memory and file descriptor leaks as well as crashes. There is also no HA story as the server is a SPOF. You are advised to run 2.0 for any production quality system. 
 
 ## What can I do with ngrok?
 - Expose any http service behind a NAT or firewall to the internet on a subdomain of ngrok.com
@@ -41,8 +45,6 @@ ngrok.com ran a pay-what-you-want hosted service of 1.x from early 2013 until Ap
 - Developing any services which consume webhooks (HTTP callbacks) by allowing you to replay those requests
 - Debugging and understanding any web service by inspecting the HTTP traffic
 - Running networked services on machines that are firewalled off from the internet
-
-#### [Pre-compiled ngrok 1.x binaries for your platform](https://ngrok.com/download/1)
 
 ## Developing on ngrok
 [ngrok developer's guide](docs/DEVELOPMENT.md)
